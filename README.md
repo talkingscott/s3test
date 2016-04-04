@@ -18,6 +18,6 @@ AWS_REGION sets the region used for S3 URLs
 AWS_S3_BUCKET sets the name of the S3 bucket
 ```
 
-The scripts use the AWS SDK and thus support the standard means for setting creditials.
+The scripts use the AWS SDK and thus support the standard means for setting credentials.
 I happen to use IAM, but the scripts should work if, for example, you supply credentials
 via ~/.aws/credentials.
