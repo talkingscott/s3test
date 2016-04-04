@@ -1,18 +1,14 @@
 # s3test
 Measure latency, transfer rate and throughput of S3 transfers
 
-## Running
-To measure latency and transfer rate on a single connection, run
+## Installation
+The scripts are written for node.js.  Assuming you already have node.js installed,
+just run
 
 ```
-node test_put_many.js
-note test_get_many.js
+git clone https://github.com/talkingscott/s3test.git
+npm install
 ```
-
-Transfers are done multiple times for multiple object sizes.  Modeling each transfer
-as a delay (latency) followed by a transfer at a fixed rate, simple linear regression on the
-test results yields a latency value (y-intercept) and transfer rate (inverse of the
-slope).
 
 ## Configuration
 There are two values that are hard-coded in the scripts.  You can edit the scripts
@@ -27,9 +23,22 @@ The scripts use the AWS SDK and thus support the standard means for setting cred
 I happen to use IAM, but the scripts should work if, for example, you supply credentials
 via ~/.aws/credentials.
 
+## Running
+To measure latency and transfer rate on a single connection, run
+
+```
+node test_put_many.js
+note test_get_many.js
+```
+
+Transfers are done multiple times for multiple object sizes.  Modeling each transfer
+as a delay (latency) followed by a transfer at a fixed rate, simple linear regression on the
+test results yields a latency value (y-intercept) and transfer rate (inverse of the
+slope).
+
 ## My Results
-Running from a t2.micro in the us-east-1 in April 2016, I get the following results (measured
-multiple times.)
+Running from a t2.micro in the us-east-1 region in April 2016, I get the following results
+(measured multiple times.)
 
 | Action | Transfer Rate (B/s) | Latency (ms) |
 | --- | ---------- | --- |
