@@ -1,9 +1,10 @@
 {
   "name": "s3test",
   "version": "0.0.1",
-  "description": "tests of s3",
+  "description": "latency, transfer rate and throughput tests of s3",
   "main": "test_put_many.js",
   "scripts": {
+    "start": "node test_put_many.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,7 +14,7 @@
     "aws-sdk": "^2.3.0",
     "vasync": "^1.6.4"
   },
-  "author": "CSN",
-  "license": "MIT",
+  "author": "Scott Nichol",
+  "license": "BSD-3-Clause",
   "private": true
 }

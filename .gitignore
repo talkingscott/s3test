@@ -1,3 +1,11 @@
+# Python helpers to parse and do regression against multiple output files
+*.py
+test_put_many*.out
+test_get_many*.out
+test_put_many_samples.txt
+
+# Output
+
 # Logs
 logs
 *.log
