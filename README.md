@@ -7,6 +7,7 @@ just run
 
 ```
 git clone https://github.com/talkingscott/s3test.git
+cd s3test
 npm install
 ```
 
