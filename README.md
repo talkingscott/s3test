@@ -9,6 +9,11 @@ node test_put_many.js
 note test_get_many.js
 ```
 
+Transfers are done multiple times for multiple object sizes.  Modeling each transfer
+as a delay (latency) followed by a transfer at a fixed rate, simple linear regression on the
+test results yields a latency value (y-intercept) and transfer rate (inverse of the
+slope).
+
 ## Configuration
 There are two values that are hard-coded in the scripts.  You can edit the scripts
 or override the hard-coded values through the environment.
