@@ -21,3 +21,22 @@ AWS_S3_BUCKET sets the name of the S3 bucket
 The scripts use the AWS SDK and thus support the standard means for setting credentials.
 I happen to use IAM, but the scripts should work if, for example, you supply credentials
 via ~/.aws/credentials.
+
+## My Results
+Running from a t2.micro in the us-east-1 in April 2016, I get the following results (measured
+multiple times.)
+
+| Action | Transfer Rate (B/s) | Latency (ms) |
+| --- | ---------- | --- |
+| put | 22,410,641 | 132 |
+| get | 21,278,382 | 132 |
+| put | 25,861,970 | 178 |
+| get | 20,141,821 | 54.3 |
+| put | 24,616,099 | 195 |
+| get | 20,939,757 | 105 |
+| put | 23,505,095 | 174 |
+| get | 20,023,594 | 105 |
+| put | 21,487,703 | 163 |
+| get | 21,438,687 | 138 |
+| put | 23,076,805 | 155 |
+| get | 20,381,101 | 120 |
