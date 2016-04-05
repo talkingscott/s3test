@@ -8,7 +8,7 @@ const async = require('vasync');
 
 const slr = require('./slr');
 
-const params = {Bucket: process.env['AWS_S3_BUCKET'] || 'foo', Key: ''};
+const params = {Bucket: process.env['AWS_S3_BUCKET'] || 'your-bucket-name', Key: ''};
  
 const samples = [];
 
@@ -22,9 +22,9 @@ function getOne(arg, callback) {
       console.error('Error getting ' + params.Key + ': ' + err);
     } else {
       console.info('Done ' + params.Key + ' (' + (end_time - start_time) + 'ms) length=' + data.Body.length);
-      samples.push({x: data.Body.length, y: (end_time - start_time) /1000.0})
+      samples.push({x: data.Body.length, y: (end_time - start_time) /1000.0});
+      delete data.Body;
     }
-    delete data.Body;
     callback(err, data);
   });
 }
