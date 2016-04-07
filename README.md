@@ -11,6 +11,9 @@ cd s3test
 npm install
 ```
 
+If you need to install node.js on Debian or Ubuntu, be sure to look at
+https://github.com/nodesource/distributions#debinstall.
+
 ## Configuration
 There are two values that are hard-coded in the scripts.  You can edit the scripts
 or override the hard-coded values through the environment.
